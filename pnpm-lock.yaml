@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  nitropack:
+    hash: ibnvkearhcmiavssyv3hc477fi
+    path: patches/nitropack.patch
+
 importers:
 
   .:
@@ -7661,7 +7666,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  nitropack@2.10.4(typescript@5.7.3):
+  nitropack@2.10.4(patch_hash=ibnvkearhcmiavssyv3hc477fi)(typescript@5.7.3):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@netlify/functions': 2.8.2
@@ -7846,7 +7851,7 @@ snapshots:
       magic-string: 0.30.17
       mlly: 1.7.4
       nanotar: 0.2.0
-      nitropack: 2.10.4(typescript@5.7.3)
+      nitropack: 2.10.4(patch_hash=ibnvkearhcmiavssyv3hc477fi)(typescript@5.7.3)
       nypm: 0.5.2
       ofetch: 1.4.1
       ohash: 1.1.4
