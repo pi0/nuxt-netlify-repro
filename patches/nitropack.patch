@@ -1,3 +1,24 @@
+diff --git a/dist/presets/netlify/preset.mjs b/dist/presets/netlify/preset.mjs
+index dd97e1257e4cb0a5c2da93af37c6cb9eb5c327d7..cce88045da9bf0849cbf116aa37654f3a3496ce0 100644
+--- a/dist/presets/netlify/preset.mjs
++++ b/dist/presets/netlify/preset.mjs
+@@ -41,6 +41,16 @@ const netlify = defineNitroPreset(
+             "utf8"
+           );
+         }
++
++        const functionConfig = {
++          config: { nodeModuleFormat: "esm" },
++          version: 1,
++        };
++        const functionConfigPath = join(
++          nitro.options.output.serverDir,
++          "server.json"
++        );
++        await fsp.writeFile(functionConfigPath, JSON.stringify(functionConfig));
+       }
+     }
+   },
 diff --git a/dist/presets/netlify/utils.mjs b/dist/presets/netlify/utils.mjs
 index 74ae91595acf3fad9cf3ac9bad171f8ee6f1f317..aed8f17e6431a49e6f20faabc374fcc5664eee71 100644
 --- a/dist/presets/netlify/utils.mjs
