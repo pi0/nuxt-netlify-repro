@@ -1,29 +1,8 @@
-// TODO: use Nuxt Image
-
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
-  spaLoadingTemplate: false,
+  // ssr: false,
 
-  modules: [
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/tailwindcss',
-    'floating-vue/nuxt',
-    'nuxt-icons',
-  ],
-
-  css: ['~/assets/css/main.scss'],
-
-  googleFonts: {
-    families: {
-      Arimo: true,
-      Baskerville: true,
-    },
+  nitro: {
+    preset: 'netlify-legacy',
   },
-
-  devtools: {
-    enabled: true,
-  },
-
-  compatibilityDate: '2025-01-29',
 });
