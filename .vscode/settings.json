@@ -1,0 +1,11 @@
+{
+  "eslint.format.enable": true, // enable eslint as a formatter
+  "stylelint.validate": ["css", "scss"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // set prettier as the default formatter
+  "editor.formatOnSave": true, // run the default formatter (prettier) on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "tailwindCSS.rootFontSize": 10
+}
