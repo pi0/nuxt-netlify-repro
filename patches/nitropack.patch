@@ -20,14 +20,15 @@ index dd97e1257e4cb0a5c2da93af37c6cb9eb5c327d7..cce88045da9bf0849cbf116aa37654f3
      }
    },
 diff --git a/dist/presets/netlify/utils.mjs b/dist/presets/netlify/utils.mjs
-index 74ae91595acf3fad9cf3ac9bad171f8ee6f1f317..aed8f17e6431a49e6f20faabc374fcc5664eee71 100644
+index 74ae91595acf3fad9cf3ac9bad171f8ee6f1f317..99c5b40fd0f74eb198629464ed06fbeff45b087a 100644
 --- a/dist/presets/netlify/utils.mjs
 +++ b/dist/presets/netlify/utils.mjs
-@@ -93,6 +93,7 @@ export const config = {
+@@ -93,6 +93,8 @@ export const config = {
    name: "server handler",
    generator: "${getGeneratorString(nitro)}",
    path: "/*",
 +  nodeModuleFormat: "esm",
++  nodeBundler: "none",
    excludedPath: ${JSON.stringify(getStaticPaths(nitro.options.publicAssets))},
    preferStatic: true,
  };
