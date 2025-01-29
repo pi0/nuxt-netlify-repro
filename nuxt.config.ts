@@ -1,8 +1,10 @@
 export default defineNuxtConfig({
-  // ssr: true,
-  ssr: false,
+  compatibilityDate: '2025-01-29',
+
+  ssr: true,
+  // ssr: false,
 
   nitro: {
-    preset: 'netlify-legacy',
+    preset: 'netlify',
   },
 });
