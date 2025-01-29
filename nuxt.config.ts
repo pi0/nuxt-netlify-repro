@@ -1,9 +1,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-29',
-  ssr: false,
+  ssr: true,
   nitro: {
-    externals: {
-      traceInclude: ['vue/server-renderer'],
-    },
+    errorHandler: 'nitropack/dist/runtime/error',
+    //   externals: {
+    //     traceInclude: ['vue/server-renderer'],
+    //   },
   },
 });
